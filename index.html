@@ -1,67 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz</title>
 </head>
 <body>
-    <h1>Quiz</h1>
-    <form id="quiz-form">
-        <div>
-            <p>1. What is the capital of France?</p>
-            <input type="radio" name="q1" value="Paris"> Paris<br>
-            <input type="radio" name="q1" value="London"> London<br>
-            <input type="radio" name="q1" value="Berlin"> Berlin<br>
-        </div>
-        <div>
-            <p>2. What is the programming language of the web?</p>
-            <input type="radio" name="q2" value="JavaScript"> JavaScript<br>
-            <input type="radio" name="q2" value="Python"> Python<br>
-            <input type="radio" name="q2" value="Java"> Java<br>
-        </div>
-        <div>
-            <p>3. What is 2 + 2?</p>
-            <input type="radio" name="q3" value="4"> 4<br>
-            <input type="radio" name="q3" value="3"> 3<br>
-            <input type="radio" name="q3" value="5"> 5<br>
-        </div>
-        <button type="button" id="submit-button">Submit</button>
-    </form>
-    <script>
-        document.getElementById("submit-button").addEventListener("click", function () {
-            const answers = {
-                q1: "Paris",
-                q2: "JavaScript",
-                q3: "4"
-            };
-
-            const form = document.getElementById("quiz-form");
-            const userAnswers = {};
-            let allAnswered = true;
-
-            // Check if all questions are answered
-            for (let question in answers) {
-                const selected = form.elements[question].value;
-                if (!selected) {
-                    allAnswered = false;
-                    break;
-                }
-                userAnswers[question] = selected;
-            }
-
-            if (!allAnswered) {
-                alert("Please answer all the questions before submitting!");
-                return;
-            }
-
-            // Save user answers and correct answers in localStorage
-            localStorage.setItem("userAnswers", JSON.stringify(userAnswers));
-            localStorage.setItem("correctAnswers", JSON.stringify(answers));
-
-            // Redirect to the results page
-            window.location.href = "results.html";
-        });
-    </script>
 </body>
 </html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Dashboard</title>
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+    <div class="profile-container">
+        <header class="profile-header">
+            <div class="profile-info">
+                <h1>Welcome back, <span id="username">Youssef</span></h1>
+                <p><strong>Account email:</strong> <span id="email">youssef.yo8.2005@gmail.com</span></p>
+                <p><strong>Home airport:</strong> <span id="airport">none</span>
+                    <button class="edit-btn" onclick="editProfileDetails()">✏️</button>   <!-- &#x270F;&#xFE0F;  ده كود القلم-->
+                </p>
+            </div>
+            <div class="profile-avatar">
+                <div class="avatar-circle">
+                    <img src="" alt="Avatar" style="display: none; width: 100%; height: 100%; border-radius: 50%;">
+                    <span>Y</span>
+                </div>
+                
+                <button class="edit-avatar-btn" onclick="changeAvatar()">✏️</button>
+            </div>
+        </header>
+
+        <nav class="profile-nav">
+            <ul>
+                <li class="active" onclick="showSection('dashboard')">Dashboard</li>
+                <li onclick="showSection('account')">account</li>
+                <li onclick="showSection('travellers')">Travellers</li>
+                <li onclick="handleLogout()">Log Out</li>
+            </ul>
+        </nav>
+
+        <!-- قسم Dashboard -->
+        <div id="dashboard" class="section active">
+            <h2>Dashboard</h2>
+            <p>Welcome to your dashboard!</p>
+            <div>
+                <p>Next trips: <span id="nextTrips">0</span></p>
+                <p>The last reservation: <span id="lastReservation">-</span></p>
+            </div>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>FLIGHT NUMBER</th>
+                        <th>DESTINATION</th>
+                        <th>HISTORY</th>
+                        <th>CASE</th>
+                    </tr>
+                </thead>
+                <tbody id="scheduleTableBody">
+                    <tr>
+                        <td colspan="4">no data</td>
+                    </tr>
+                </tbody>
+            </table>            
+        </div>
+
+        <!-- قسم account -->
+        <div id="account" class="section account">
+            <h2>account</h2>
+            <div class="account-item">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" value="Youssef" required>
+            </div>
+            <div class="account-item">
+                <label for="email">Email Address:</label>
+                <input type="email" id="emailInput" value="youssef.yo8.2005@gmail.com" required>
+            </div>
+            <div class="account-item">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" value="+" required>
+            </div>
+            <div class="account-item">
+                <label for="nationality">Your nationality:</label>
+                <input type="text" id="nationality" placeholder="egypt" required>
+            </div>
+            <div class="account-item">
+                <label for="Address">Your address:</label>
+                <input type="text" id="address" placeholder="Governorate - City - Region - Street" required>
+            </div>
+            <div class="account-item">
+                <label for="dateOfBirth">Date of Birth:</label>
+                <input type="date" id="dateOfBirth" value="Youssef">
+            </div>
+            <div class="gender-container">
+                <label for="genger">gender:</label><br>
+                <input style="transform: translateX(-430px);" type="radio" id="male" name="gender" value="male" required>
+                <label style="transform: translateX(-580px);" for="male">Male</label>
+                <input style="transform: translateX(-1070px);" type="radio" id="female" name="gender" value="female">
+                <label style="transform: translateX(-1220px);" for="female">Female</label> 
+            </div>
+            <button class="apply-btn" onclick="applyChanges()">Apply</button>
+        </div>
+
+        <!-- قسم travellers -->
+        <div id="travellers" class="section travellers">
+            <h2>Travellers</h2>
+            <table id="travellers-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Date of Birth</th>
+                        <th>Passport Number</th>
+                        <th>phone Number</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- المسافرون هيتضافوا تلقائي -->
+                </tbody>
+            </table>
+            <button id="add-traveller-btn">Add Traveller</button>
+        
+            <!-- فورم اضافة او تعديل مسافر -->
+            <div id="traveller-form-container" class="hidden">
+                <h3 id="form-title" style="transform: translateY(-20px);">Add New Traveller</h3>
+                <form style="transform: translateY(20px);" id="traveller-form">
+                    <div class="form-group">
+                        <label for="traveller-name">Name:</label>
+                        <input type="text" id="traveller-name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="traveller-dob">Date of Birth:</label>
+                        <input type="date" id="traveller-dob" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="traveller-passport">Passport Number:</label>
+                        <input type="text" id="traveller-passport" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="traveller-phone">phone Number:</label>
+                        <input type="text" id="traveller-phone" required>
+                    </div>
+                    <button type="submit">Save</button>
+                    <button type="button" id="cancel-btn">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/profile.js"></script>
+</body>
+</html>

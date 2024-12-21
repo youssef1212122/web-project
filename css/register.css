@@ -1,0 +1,56 @@
+body{
+    background-image: url('../images/profile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+form{
+    width: 350px;
+    height: 500px;
+    border: 2px solid #131303;
+    background-color: #333;
+    border-radius: 10px;
+    margin: 150px auto;
+    text-align: center;
+}
+h1{
+    color: #FF7F50;
+    margin: 10px;
+    font-size: 60px;
+}
+input[type="email"],[type="password"],[type="text"],[type="username"]{
+    width: 300px;
+    height: 40px;
+    margin: 10px;
+    font-weight: 600;
+}
+input[type="submit"]{
+    width: 100px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: 500;
+    background-color:#FF7F50;
+    color: #fff;    
+    cursor: pointer;
+}
+input[type="reset"]{
+    width: 100px;
+    height: 30px; 
+    font-size: 20px; 
+    font-weight: 500; 
+    background-color:#FF7F50;
+    color: #fff;
+    cursor: pointer;
+}
+.Apply:hover{
+    background-color: #FF6347;
+    transition: 0.3s;
+}
+
+p{
+    color: #FF7F50;
+    font-size: 20px;
+}
+
+a:visited{
+    color: aqua;
+}

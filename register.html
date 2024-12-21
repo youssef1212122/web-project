@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="css/register.css"/>
+</head>
+<body>
+    <form id="registerForm" onsubmit="saveUserInfo(event)">
+        <h1>Register</h1>
+        <input type="text" id="username" name="username" placeholder="username" required><br>
+        <input type="email" id="email" name="email" placeholder="Email" required><br>
+        <input type="password" id="password" name="password" placeholder="new password" required><br>
+        <input type="password" id="confirm-password" name="confirm-password" placeholder="confirm password" required><br>
+        <input type="text" id="home-airport" name="home-airport" placeholder="home airport" required><br>
+        <input class="Apply" type="submit" value="Sign Up">
+        <input class="Apply" type="reset" value="Clear">
+        <p style="margin-left: 10px;">Already have an account? <a href="login.html">Login here</a>.</p>
+    </form>
+
+    <script src="js/profile.js"></script>
+</body>
+</html>

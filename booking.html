@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/booking.css">
+</head>
+<body>
+    <header>
+        <div class="logo">bo<span>oking</span></div>
+        <nav>
+            <a href="#fly">Find Flight</a>
+            <a href="#hotel">Find Stays</a>
+        </nav>
+        <a href="profile.html" class="profile-icon" title="Go to Profile">
+            <i class="fas fa-user-circle"></i>
+        </a>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Make your travel wishlist, we'll do the rest</h1>
+            <p>Special offers to suit your plan</p>
+        </section>
+        <section class="search">
+            <form id="booking-form">
+                <div class="title">
+                    <b>Where are you flying?</b>
+                </div>
+
+                <div class="line-one">
+                    <div class="field">
+                        <label for="destination" >Destination</label>
+                        <select id="destination" required>
+                            <option value="" disabled selected>Please Select</option>
+                            <option value="Alex">Alex</option>
+                            <option value="PortSaid">PortSaid</option>
+                            <option value="Cairo">Cairo</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="line-two">
+                    <div class="field">
+                        <label for="ticket-type">Ticket Type</label>
+                        <select id="ticket-type" required>
+                            <option value="" disabled selected>Please Select</option>
+                            <option value="Go">Go</option>
+                            <option value="GoBack">Go & Back</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="travel-class">Travel Class</label>
+                        <select id="travel-class" required>
+                            <option value="" disabled selected>Please Select</option>
+                            <option value="Economy">Economy</option>
+                            <option value="Business">Business</option>
+                            <option value="First">First</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="line-three">
+                    <div class="field">
+                        <label for="travel-date">Travel Date</label>
+                        <input type="date" id="travel-date" required />
+                    </div>
+
+                    <div class="field">
+                        <label for="return-date">Return Date</label>
+                        <input type="date" id="return-date" />
+                    </div>
+                </div>
+
+                <div class="title">
+                    <b>Find your Stays...</b>
+                </div>
+
+                <div class="line-four">
+                    <div class="field">
+                        <label for="hotel">Hotel</label>
+                        <select id="hotel" required>
+                            <option value="" disabled selected>Please Select</option>
+                            <option value="Ahmos-Hotel">Ahmos Hotel</option>
+                            <option value="Cairo-Hotel">Cairo Hotel</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="line-five">
+                    <div class="field">
+                        <label for="rooms">Rooms</label>
+                        <select id="rooms" required>
+                            <option value="" disabled selected>Please Select</option>
+                            <option value="1-Room">1 Room</option>
+                            <option value="2-Rooms">2 Rooms</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="guests">Guests</label>
+                        <select id="guests" required>
+                            <option value="" disabled selected>Please Select</option>
+                            <option value="1-Guest">1 Guest</option>
+                            <option value="2-Guests">2 Guests</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="line-six">
+                    <div class="field">
+                        <label for="check-in">Check In</label>
+                        <input type="date" id="check-in" required/>
+                    </div>
+
+                    <div class="field">
+                        <label for="check-out">Check Out</label>
+                        <input type="date" id="check-out"/>
+                    </div>
+                </div>
+
+                <button class="apply" type="submit">BOOKING</button>
+            </form>
+        </section>
+    </main>
+    <footer id="footer">
+        <p>Follow us on:</p>
+        <a href="https://facebook.com" target="_blank" class="social-icon">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" class="social-icon">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <p>&copy; 2024 Travel Planner. All rights reserved.</p>
+    </footer>
+    <script src="js/profile.js"></script>
+</body>
+</html>

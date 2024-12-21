@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css"/>
+</head>
+<body>
+    <form id="loginForm" onsubmit="handleLogin(event)">
+        <h1>Login</h1>
+        <input type="text" id="username" name="username" placeholder="Username" required><br>
+        <input type="password" id="password" name="password" placeholder="Password" required><br>
+        <input class="Apply" type="submit" value="Log In">
+        <input class="Apply" type="reset" value="Clear">
+        <p style="margin-left: 10px;">Don't have an account? <a href="register.html">Register here</a>.</p>
+    </form>
+
+    <script src="js/profile.js"></script>
+</body>
+</html>

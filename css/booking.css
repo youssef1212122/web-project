@@ -1,0 +1,247 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #333;
+  }
+
+  a{
+    color : inherit;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .user-profile{
+  display: flex;
+  gap:50px;
+  font-size: 20px;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    background-color: #333;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .logo span {
+    color: rgb(255, 255, 255);
+  }
+  
+  nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #ffa726;
+  }
+  
+  .user-menu {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-profile {
+    position: relative;
+    color: #ffa726;
+  }
+  
+  .user-profile img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  
+  .user-profile .dropdown {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px 0;
+  }
+  
+  .user-profile:hover .dropdown {
+    display: block;
+  }
+  
+  .user-profile .dropdown li {
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .hero {
+    background: url('../images/amg1.jpg') no-repeat center center/cover;
+    color: #fff;
+    height: 300px;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  h1{
+    font-size: 50px;
+
+  }
+
+  p{
+    font-size: 30px;
+    
+  }
+  .search {
+    
+  
+    display: flex;
+    width: 100%;
+    max-width: 950px;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: -160px auto 80px;   
+     
+  }
+
+.field {
+ height: 50px;
+ display: flex;
+ flex-direction: column;
+padding: 28px; /* مسافة داخلية */
+}
+
+
+.title{
+  font-size: 30px;
+  margin:20px;
+}
+
+.line-one{
+  
+  display: flex;
+  width: 100%;
+  margin: 30px auto 8px;
+  
+}
+.line-two{
+  
+  display: flex;
+  width: 100%;
+  margin: 8px auto 10px;
+  gap: 50px;
+}
+
+.line-three{
+  
+  display: flex;
+  width: 100%;
+  margin: 10px auto 50px;
+  gap: 50px;
+}
+
+
+.line-forth{
+  display: flex;
+  width: 100%;
+  margin: 20px auto 10px;
+  gap: 10px;
+}
+.line-five{
+  display: flex;
+  width: 100%;
+  margin: 20px auto 10px;
+  gap: 50px;
+}
+
+.line-six{
+  gap: 50px;
+  display: flex;
+  width: 100%;
+  margin: 10px auto 10px;
+}
+
+
+.custom-select {
+  position: relative;
+  display: inline-block;
+}
+
+
+
+
+form {
+  width: 100%;
+  max-width: 100%;
+  background: rgba(255, 255, 255, 0.2); /* اللون الأبيض مع الشفافية */
+  border-radius: 25px;
+  backdrop-filter: blur(10px); /* تأثير الضبابية */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* إضافة ظل لتقوية التأثير */
+color:white;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+}
+
+
+.field {
+  width: 100%;
+}
+
+.field label {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+  display: block;
+}
+
+
+ input[type="date"], select {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  border: 2px solid #04589e;
+  border-radius: 58px;
+  box-sizing: border-box;
+}
+
+select {
+  background-color: #ffa726;
+  color: white;
+  border: none;
+  font-size: 16px;
+  appearance: none;
+  padding-right: 30px;
+  position: relative;
+}
+
+
+
+select:focus {
+  outline: none;
+  box-shadow: 0 0 20px #f6ff00;
+}
+
+
+button.apply {
+  width: 70%;
+  background: linear-gradient(to right, #ffa726, rgb(0, 0, 0));  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  margin: 50px 130px 60px;
+  padding: 12px 24px;         /* مساحة داخلية للزر */
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+    
+}
+
+button.apply:hover {
+  background-color: #000;
+  transform: translateY(-3px); /* حركة صغيرة عند التمرير */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* زيادة الظل عند التمرير */
+  transition: all 0.3s ease;  
+
+}

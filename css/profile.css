@@ -200,7 +200,7 @@ body {
     line-height: 1.6;
     margin: 20px;
     color: #333;
-} /* لو فيه ملعومات متكرره مع اللي فوق ف بياخد اخر حاجه */
+} /* لو فيه معلومات متكرره مع اللي فوق ف بياخد اخر حاجه */
 
 h2, h3, p {
     color: #ffa726;
@@ -381,22 +381,49 @@ form input {
     color: #ffa726;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     padding: 0px 30px;
-  }
+}
   
-  #header h1 {
+#header h1 {
     font-size: 2.5em;
     font-weight: bold;
-  }
+}
 
-  nav a {
-    margin: 0 50px;
-    text-decoration: none;
+nav a {
+    position: relative;
+    display: inline-block;
     color: #ffa726;
-    font-size: 2.5em;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 30px;
     font-weight: bold;
-  }
+    transition: color 0.3s ease;
+}
 
-  #footer {
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, #ff7b54, #ffcc29);
+    transition: width 0.4s ease;
+}
+
+nav a:hover {
+    color: #ffcc29;
+}
+
+nav a:hover::after {
+    width: 100%; 
+}
+
+nav a:hover {
+    transform: scale(1.1); 
+    text-shadow: 0 0 10px rgba(255, 204, 41, 0.8);
+}
+
+#footer {
     background: #333333;
     color: #ffa726;
     margin-bottom: -150px;
@@ -406,17 +433,17 @@ form input {
     font-size: 0.9em;
     border-top: 2px solid #ffa726;
     text-align: center;
-  }
+}
   
-  .social-icon {
+.social-icon {
     color: #ffa726;
     font-size: 1.8em;
     margin: 0 15px;
     transition: transform 0.3s ease, color 0.3s ease;
-  }
+}
   
-  .social-icon:hover {
+.social-icon:hover {
     color: #ffa726;
     transform: scale(1.2);
-  }
+}
   
